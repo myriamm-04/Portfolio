@@ -1,0 +1,305 @@
+
+/* PARTIE TRADUCTION */
+/* 3. On évite que le conteneur du bouton de langue ne bouge d'un poil */
+.switch-container {
+    position: absolute; /* Place le bouton en autonomie complète */
+    top: 20px;          /* Ajuste selon tes besoins */
+    left: 20px;         /* Aligne le bouton à droite proprement */
+    height: 30px;
+    z-index: 100;
+}
+
+#btnlang {
+    opacity: 0;
+    width: 0;
+    height: 0;
+    position: absolute; /* Évite qu'il prenne de la place invisible */
+}
+
+/* Le label devient le vrai conteneur de référence */
+.switch-container label {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 26px;
+    cursor: pointer;
+}
+
+.slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #cccc;
+    border-radius: 30px;
+    transition: 0.4s;
+}
+
+/* La pastille à l'intérieur */
+.slider:before {
+    content: "";
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    background-color: rgb(50, 54, 111);
+    border-radius: 50%;
+    top: 4px; /* (26px de haut - 18px de pastille) / 2 = 4px pour centrer */
+    left: 4px;
+    transition: 0.4s;
+}
+
+/* BONUS : Animation quand le bouton est coché (version anglaise) */
+#btnlang:checked + .slider:before {
+    transform: translateX(24px); /* Déplace la bille vers la droite */
+}
+
+#btnlang:checked + .slider {
+    background-color: #6ee7b7; /* Optionnel : change la couleur de fond quand c'est actif */
+}
+
+/* LE RESTE */
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333333;
+    background-color: #eeb3c6;
+    margin: 0;
+    padding: 0;
+}
+
+/* Active un effet de glissement fluide quand on clique sur les liens */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Positionne le menu tout en haut à droite */
+.navbar {
+    position: absolute;
+    top: 25px;
+    right: 30px; /* Aligné à droite pendant que la langue est à gauche */
+    display: flex;
+    gap: 20px;   /* Espace entre chaque lien du menu */
+    z-index: 100;
+}
+
+/* Style des liens du menu */
+.navbar a {
+    text-decoration: none;
+    color: rgb(50, 54, 111); /* Ton bleu-nuit */
+    font-weight: 600;
+    font-size: 1rem;
+    transition: color 0.2s ease;
+}
+
+/* Petit effet de survol sympa */
+.navbar a:hover {
+    color: #23264f; 
+    text-decoration: underline; /* Souligne légèrement au survol */
+}
+
+header {
+    text-align: center;       /* Centre tout le texte à l'intérieur du header */
+    padding: 40px 20px;
+}
+
+h2 {
+    text-align: center;
+    color: rgb(50, 54, 111);
+    margin-bottom: 20px;
+}
+
+/* Centrer la carte de projet sur l'écran */
+.projets-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+/* Image de la carte métier */
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    border-radius: 6px;
+    margin-top: 20px;
+}
+
+.projets-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.projet-card {
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    padding: 25px;
+    background-color: #eeb3c6; /* c'est okay */
+    max-width: 700px; 
+    width: 100%;
+}
+
+/* Le conteneur de tes bulles/badges */
+.technos {
+    display: flex;
+    flex-wrap: wrap; /* Force les bulles à aller à la ligne s'il n'y a plus de place */
+    gap: 8px;        /* L'espace magique ENTRE les bulles */
+    margin-bottom: 25px;
+}
+
+/* Le design de chaque bulle de technologie */
+.badge-tech {
+    background-color: #e2e8f0; /* Gris clair pastel */
+    color: #4a5568;            /* Texte gris foncé */
+    padding: 6px 14px;
+    border-radius: 20px;       /* Des bords super arrondis pour faire l'effet bulle */
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+/* Le bouton d'action pour GitHub */
+.btn-projet {
+    display: inline-block;
+    background-color: rgb(50, 54, 111); /* Ton bleu-nuit */
+    color: white;
+    text-decoration: none; /* Enlève le soulignement moche du lien */
+    padding: 12px 24px;
+    border-radius: 20px;
+    font-weight: bold;
+    text-align: center;
+    transition: background-color 0.2s ease; /* Petit effet fluide au survol */
+}
+
+/* Quand on passe la souris sur le bouton */
+.btn-projet:hover {
+    background-color: #23264f; /* Un bleu encore plus foncé */
+}
+
+section {
+    max-width: 900px;         /* Limite la largeur pour que ce soit agréable à lire */
+    margin: 30px auto;        /* "auto" centre le BLOC entier au milieu de la page */
+    padding: 30px;            /* Donne de l'espace à l'intérieur du bloc pour que le texte respire */
+    background-color: white;  /* Fond blanc pour le bloc */
+    border-radius: 12px;      /* Arrondit les angles du bloc */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05); /* Une petite ombre légère pour donner du relief */
+}
+
+/* PARTIE CONTACT : */
+
+/* Style du formulaire */
+.form-contact {
+    max-width: 600px;
+    margin: 20px auto 0 auto; /* Centre le formulaire dans la section */
+}
+
+.contact-sub {
+    text-align: center;
+    color: #666;
+    margin-bottom: 25px;
+}
+
+/* Espacement entre chaque champ */
+.form-group {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column; /* Aligne le label au-dessus de la case */
+}
+
+/* Style des textes au-dessus des cases */
+.form-group label {
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #333;
+}
+
+/* Style des cases à remplir (input et textarea) */
+.form-group input, 
+.form-group textarea {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-family: inherit; /* Aligne la police sur celle du site */
+    font-size: 1rem;
+    background-color: #f8f9fa;
+    transition: border-color 0.2s, background-color 0.2s;
+}
+
+/* Petit effet sympa quand le recruteur clique dans une case */
+.form-group input:focus, 
+.form-group textarea:focus {
+    border-color: rgb(50, 54, 111); /* Ton bleu-nuit */
+    background-color: #fff;
+    outline: none; /* Enlève la bordure noire par défaut */
+}
+
+/* Bouton d'envoi */
+.btn-submit {
+    display: block;
+    width: 100%; /* Le bouton prend toute la largeur du formulaire */
+    background-color: rgb(50, 54, 111);
+    color: white;
+    border: none;
+    padding: 14px;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.btn-submit:hover {
+    background-color: #23264f; /* Bleu plus foncé au survol */
+}
+
+/* VEILLE INFO */
+
+/* On force le conteneur à afficher 2 colonnes avec 30px d'espace */
+#VeilleInfo .projets-container {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 30px ; /* L'espace entre les deux blocs */
+    justify-content: space-between;
+}
+
+/* 1. Aligner les deux paragraphes "Aujourd'hui..." et "Contrairement..." */
+#VeilleInfo .veille-card p {
+    min-height: 140px; /* 👈 Force les deux textes à prendre la même hauteur */
+    margin-bottom: 15px;
+}
+
+/* 2. Aligner les deux titres "Pourquoi ce choix ?" */
+#VeilleInfo .sveille-card h4 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    height: 30px; /* 👈 Force les titres sur la même ligne */
+}
+
+/* 3. Ajuster l'espace des listes à puces */
+#VeilleInfo .liste-veille {
+    margin: 0;
+    padding-left: 20px;
+}
+
+/* On adapte les cartes de veille pour qu'elles se partagent l'espace */
+.veille-card {
+    flex: 1;
+    margin: 0;
+    min-width: 280px; /* Évite que la carte devienne trop étroite*/
+    margin: 10px;
+    padding: 25px;
+}
+
+
+/* Style spécifique pour les listes de la veille (les flèches du sujet) */
+.liste-veille {
+    list-style-type: "→ "; /* Remplace le point noir moche par une jolie flèche */
+    padding-left: 15px;
+    color: #4a5568;
+}
+
+.liste-veille li {
+    margin-bottom: 10px;
+}
+
