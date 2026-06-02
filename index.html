@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Portfolio - FR</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="switch-container">
+            <span class="drapeau-fr">🇫🇷</span>
+            
+            <label>
+                <input type="checkbox" id="btnlang" onclick="switchLanguage()">
+                <span class="slider"></span>
+            </label>
+
+            <span class="drapeau-en">🇺🇸</span>
+        </div>
+
+        <nav class="navbar">
+            <a href="#presentation">À propos</a>
+            <a href="#ma-formation">Formation</a>
+            <a href="#competences">Compétences</a>
+            <a href="#VeilleInfo">Veille</a>
+            <a href="#projets">Projets</a>
+            <a href="#contact">Contact</a>
+        </nav>
+
+        <header>
+            <h1>BOUKIND Myriam</h1>
+            <p>Étudiante en BTS SIO - Option SLAM</p>
+        </header>
+
+        <section id="presentation">
+            <h2>À propos de moi</h2>
+            <p><strong>Qui suis-je ?</strong></p>
+            <p>Actuellement en BTS SIO option SLAM, je suis passionnée par le développement informatique. 
+            Mon intérêt pour l’informatique a débuté lors de ma première année en école d’ingénieur, où j’ai découvert les bases de la programmation. 
+            Cette expérience a été un déclic pour moi : j’ai su que je voulais évoluer dans ce domaine. 
+            Je me suis ensuite réorientée voulant mêler l’informatique aux sciences de la vie et par la suite avoir une carrière dans la e-santé seulement j’ai réalisée durant l’année que ce qui m’intéressait le plus était l’informatique pure : créer des applications utiles, coder des solutions concrètes.
+            Aujourd’hui, je me suis tourné vers un BTS SIO option SLAM afin d’approfondir mes compétences pratiques et me préparer vers un métier dans le développement d’applications.
+            Curieuse et motivée, et en constante recherche de défis, je suis prête à contribuer à des projets concrets et ambitieux.
+            </p>
+    
+            <p><strong>Mon parcours</strong></p>
+            <ul>
+                <li>Obtention du Baccalauréat en 2023</li>
+                <li>1ère année de Prépa intégrée en 2023-2024</li>
+                <li>LDD1 Sciences De la Vie - Informatique en 2024-2025</li>
+                <li>BTS1 Services Informatiques aux Organisations option SLAM en 2025-2026</li>
+            </ul>
+        </section>
+        <section id="ma-formation">
+            <h2>Qu'est-ce que le BTS SIO ?</h2>
+            <p>Le BTS SIO (Services Informatiques aux Organisations) est une formation en 2 ans qui forme des techniciens capables de concevoir, développer et maintenir des solutions informatiques au sein d’une entreprise. L’option SLAM (Solutions Logicielles et Applications Métiers) se concentre principalement sur le développement d’applications (web, mobile ou logiciels), la programmation, la gestion de bases de données, et la maintenance d’applications existantes. Les étudiants apprennent à analyser les besoins des utilisateurs, à concevoir des solutions logicielles sur mesure, et à gérer les différentes phases du cycle de vie d’une application. Cette formation prépare aussi à travailler en mode projet, en respectant les contraintes de qualité, sécurité, et délais, tout en développant des compétences professionnelles utiles en entreprise, notamment grâce aux stages.</p>
+    
+            <p><strong>Quel métier je vise pour le futur ?</strong></p>
+            <p>Dans quelques années , j’aimerais devenir Software Engineer. C’est un métier qui me permettrait de concevoir et développer des applications utiles, performantes et adaptées aux besoins des utilisateurs.</p>
+            <img src="assets/carte.avif" alt="carte métier">
+        </section>
+        <section id="competences">
+            <h2>Compétences abordées en 1ère année</h2>
+            <p>Lors de cette première année, nous allons acquérir plusieurs compétences qui sont :</p>
+            <ul>
+                <li>Développement et langages</li>
+                <ul>
+                    <li>C# avec Visual Studio</li>
+                    <li>PHP/HTML/CSS/Javascript avec Netbeans</li>
+                    <li>Java avec Eclipse</li>
+                    <li>Python avec PyCharm</li>
+                </ul>
+                <li>Utilisation de CMS</li>
+                <ul>
+                    <li>WordPress : création et personnalisation de sites web à l’aide de thèmes, extensions, et gestion de contenu</li>
+                </ul>
+                <li>Bases de données (SGBD)</li>
+                <ul>
+                    <li>MySQL</li>
+                    <li>PostgreSQL</li>
+                    <li>MongoDB</li>
+                </ul>
+                <li>Qualité logicielle</li>
+                <ul>
+                    <li>normes (KISS, DRY, SOLID)</li>
+                    <li>tests (unitaires, fonctionnels)</li>
+                    <li>analyse de code (Sonarlint)</li>
+                </ul>
+                <li>Méthodes de conception</li>
+                <ul>
+                    <li>Merise/2</li>
+                    <li>UML</li>
+                </ul>
+                <li>Travail collaboratif et gestion de code</li>
+                <ul>
+                    <li>GitHub (push, pull request...)</li>
+                </ul>
+            </ul>
+        </section>
+
+        <section id="VeilleInfo">
+            <h2>Veille Informatique</h2>
+            
+            <!-- PREMIÈRE LIGNE : Les explications des sujets -->
+            <div class="projets-container">
+                <div class="projet-card veille-card">
+                    <h3>Sujet 1 : L'IA et l'automatisation dans le développement</h3>
+                    <p>Aujourd'hui, l'intelligence artificielle révolutionne notre façon de coder. Avec des assistants comme GitHub Copilot ou ChatGPT, on peut générer du code, corriger des bugs ou automatiser des tests beaucoup plus vite. Cela booste la productivité, mais pose aussi de grandes questions sur la sécurité du code, l'éthique et la fiabilité de ce qui est généré.</p>
+                </div>
+
+                <div class="projet-card veille-card">
+                    <h3>Sujet 2 : L'informatique quantique</h3>
+                    <p>Contrairement à nos ordinateurs actifs qui fonctionnent avec des bits (0 ou 1), l'informatique quantique utilise des qubits. Grâce au phénomène de superposition, un qubit peut être un 0, un 1, ou les deux à la fois. Cela permet d'exécuter des calculs complexes en parallèle à une vitesse gigantesque.</p>
+                </div>
+            </div>
+
+            <!-- DEUXIÈME LIGNE : Pourquoi ce choix ? -->
+            <div class="projets-container" style="margin-top: 20px;">
+                <div class="projet-card veille-card">
+                    <h4>Pourquoi ce choix ?</h4>
+                    <ul class="liste-veille">
+                        <li>C'est un sujet d'actualité brûlant qui évolue de jour en jour.</li>
+                        <li>L'IA transforme directement les compétences attendues chez un développeur.</li>
+                        <li>Cela modifie en profondeur nos méthodes de travail au quotidien.</li>
+                    </ul>
+                </div>
+
+                <div class="projet-card veille-card">
+                    <h4>Pourquoi ce choix ?</h4>
+                    <ul class="liste-veille">
+                        <li>Les applications futures vont bouleverser le monde (médecine, climat, cybersécurité).</li>
+                        <li>C'est un domaine fascinant qui remet totalement à plat les bases de l'informatique.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        
+        <section id="projets">
+            <h2>Mes Réalisations</h2>
+            <div class="projets-container">
+                <div class="projet-card">
+                    <p><strong>MediaTek86 - Gestion du Personnel</strong></p>
+                    <p class="contexte-role"><strong>Contexte :</strong> ESN InfoTech Services 86 pour le réseau des médiathèques de la Vienne.</p>
+                
+                    <p class="description">Développement d'une application de bureau monoposte destinée au service administratif. 
+                        Elle permet de gérer les agents des différentes médiathèques, leurs affectations dans les services ainsi que le suivi de leurs absences.
+                    </p>
+
+                    <p><strong>Réalisations techniques :</strong></p>
+                   
+                    <ul>
+                        <li>Mise en place de l'environnement : Visual Studio 2022 et Wampserver</li>
+                        <li>Modélisation et injection du script SQL pour la base de données</li>
+                        <li>Sécurisation de l'application (chiffrement SHA-2 pour la table responsable)</li>
+                        <li>Création des packages respectant le pattern d'architecture MVC</li>
+                        <li>Suivi du projet : Sauvegarde du code sur GitHub et organisation des tâches avec un tableau Kanban.</li>
+                        <li>Documentation : Génération automatique de la doc technique en HTML avec Sandcastle.</li>
+                    </ul>
+
+                    <div class="technos">
+                        <p><strong>Technologies utilisées</strong></p>
+                        <span class="badge-tech">.NET</span>
+                        <span class="badge-tech">MySQL (ou SQL Server)</span>
+                        <span class="badge-tech">Architecture MVC</span>
+                        <span class="badge-tech">Sandcastle (SHFB)</span>
+                        <span class="badge-tech">Git / GitHub</span>
+                    </div>
+
+                    <div class="liens-projet">
+                        <a href="https://github.com/myriamm-04/MonApp.git" target="_blank" class="btn-projet">Voir le dépôt GitHub (Code & Doc)</a>
+                        <a href="https://github.com/myriamm-04/MonApp/releases/download/v1.0.0/MediaTek86_Livrable.zip" target="_blank" class="btn-projet" style="background-color: #22c55e;">Télécharger l'application (.zip)</a>
+                    </div>         
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2>Me contacter</h2>
+            <p class="contact-sub">Une offre de stage ? Écrivez-moi directement ici !</p>
+            
+            <form action="https://formspree.io/f/mzdwnbde" method="POST" class="form-contact">
+                <div class="form-group">
+                    <label for="email">Votre adresse email :</label>
+                    <input type="email" id="email" name="email" placeholder="exemple@mail.com" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="object">Objet du message :</label>
+                    <input type="text" id="object" name="object" placeholder="Sujet de votre message" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Votre message :</label>
+                    <textarea id="message" name="message" rows="6" placeholder="Bonjour, je souhaiterais vous proposer un entretien..." required></textarea>
+                </div>
+
+                <button type="submit" class="btn-submit">Envoyer le message</button>
+            </form>
+        </section>
+
+        <script>
+            function switchLanguage() 
+            {
+                window.location.href="en.html"
+            }
+        </script>
+
+    </body>
+</html>
